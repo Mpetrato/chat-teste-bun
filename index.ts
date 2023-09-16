@@ -27,6 +27,7 @@ Bun.serve({
   },
   websocket: {
     open(ws) {
+      console.log(uuid)
       ws.subscribe("chat" + uuid);
     },
     message(ws, data) {

@@ -55,13 +55,15 @@
       const el = document.createElement("h3");
 
       // Set text of element to be message
-      el.appendChild(
-        document.createTextNode(message.text)
-      );
+      // el.appendChild(
+      //   document.createTextNode(message.text)
+      // );
+
+      el.innerText = message.text
 
       // Scroll to bottom of messages element
       const messagesEl = document.getElementById("messages");
-      messagesEl.appendChild(el);
+      messagesEl.innerText = message.text
       messagesEl.scrollTo(0, messagesEl.scrollHeight);
     };
 
